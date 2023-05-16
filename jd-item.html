@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .more2_item {
+        width: 190px;
+        height: 266px;
+        background-color: #fff;
+        position: relative;
+        list-style: none;
+        border: 10px solid rgb(250, 248, 248);
+      }
+
+      .more2_lk {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .more2_img {
+        width: 120px;
+        height: 120px;
+        margin: 30px auto;
+        display: block;
+        position: relative;
+      }
+
+      .more2_img::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: 300ms linear;
+      }
+
+      .more2_item:hover .more2_img::after {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .more2_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .more2_info {
+        line-height: 22px;
+        padding: 0 10px;
+        height: 65px;
+      }
+
+      .more2_info_name {
+        font-size: 12px;
+        color: #666666;
+        line-height: 20px;
+        height: 40px;
+        text-align: left;
+        overflow: hidden;
+      }
+
+      .more2_info_self {
+        padding: 0 5px;
+        margin-right: 4px;
+        line-height: 16px;
+        font-size: 12px;
+        background-color: #e1251b;
+        border-radius: 2px;
+        display: inline-block;
+        height: 16px;
+        color: white;
+      }
+
+      .more2_info_price {
+        margin-top: 10px;
+      }
+
+      .mod_price {
+        width: 62px;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 18px;
+        color: #e1251b;
+      }
+
+      .mod_price i {
+        margin-right: 3px;
+        font-size: 12px;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .more2_info_price_txt {
+        font-size: 16ox;
+        font-weight: 700;
+      }
+
+      .more2_info_price_txt-decimal {
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .more2_item_delete {
+        display: block;
+        position: absolute;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAANJJREFUOMvtkU0KwjAQhafVZcFVVXoMD+EBWnsDb6WCBRdNfyDdxa16gRzFG/hGJhKllW4FH3wQpn0vMxmiv14yxpBSiuq6XoE1CMHzW1VVzBLkqEWu/qamadhMYr6CDARijsEOHPDfrDeAJQGBmG8ghWnOZpxPMCd80Vd5ISm4gDMoRpmdvJkNuCNga62lUQEfMxdslk4y6azf2HUdlWXJ5gXYu5nbtiXvTTaohb0hWmsXkMtrJ95m+GZe4RHEg12IIeJV+fPyGUwBjzYZDPhNPQCZAMge0sk3nAAAAABJRU5ErkJggg==);
+        top: 10px;
+        top: 10px;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 300ms linear;
+      }
+
+      .more2_item:hover .more2_item_delete {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .more2_item_hd {
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        width: 100%;
+        bottom: 8px;
+        left: 0;
+        height: 54px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 300ms linear;
+      }
+
+      .more2_item:hover .more2_item_hd {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .more2_item_btn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .more2_item_btn span {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translateX(-50%);
+        background-color: black;
+        font-size: 13px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        transition: 300ms linear;
+        color: white;
+
+        /* visibility: hidden;
+        opacity: 0; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <li class="more2_item more2_item_good hover-on">
+      <a
+        class="more2_lk"
+        href="//item.jd.com/100014266462.html?bbtf=1"
+        target="_blank"
+        title="九阳（Joyoung）无涂层精铁炒锅铁锅32cm炒菜锅不易锈电磁炉燃气煤气通用烹饪锅具"
+        aria-label="九阳（Joyoung）无涂层精铁炒锅铁锅32cm炒菜锅不易锈电磁炉燃气煤气通用烹饪锅具"
+        clstag="h|keycount|feed|01#pd_057-a"
+      >
+        <div class="lazyimg lazyimg_loaded more2_img">
+          <img
+            src="//img11.360buyimg.com/jdcms/s300x300_jfs/t1/136558/12/29665/96046/64391bd1Fb042b92e/7e99e76793a39e97.jpg.avif"
+            class="lazyimg_img"
+            alt="九阳（Joyoung）无涂层精铁炒锅铁锅32cm炒菜锅不易锈电磁炉燃气煤气通用烹饪锅具"
+          />
+        </div>
+        <div class="more2_info">
+          <p class="more2_info_name">
+            <i class="more2_info_self">自营</i
+            >九阳（Joyoung）无涂层精铁炒锅铁锅32cm炒菜锅不易锈电磁炉燃气煤气通用烹饪锅具
+          </p>
+          <div
+            class="more2_info_price more2_info_price_plus more2_info_price_newcomer"
+          >
+            <div class="mod_price">
+              <i>¥</i
+              ><span class="more2_info_price_txt"
+                >59.<span class="more2_info_price_txt-decimal">90</span></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="more2_item_hover">
+          <div
+            class="more2_item_delete"
+            clstag="h|keycount||feed|01#pd_057-b"
+            title="不喜欢"
+          ></div>
+          <div class="more2_item_hd" title="">
+            <div
+              class="more2_item_btn more2_btn_find enable"
+              clstag="h|keycount||feed|01#pd_057-c"
+            >
+              <i class="more2_btn_icon"></i><span>找相似</span>
+            </div>
+          </div>
+        </div></a
+      >
+    </li>
+  </body>
+</html>
